@@ -23,15 +23,15 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgmNavigationComponent } from './sections/ngm-navigation/ngm-navigation.component';
-import { NgmDashboardComponent } from './views/ngm-dashboard/ngm-dashboard.component';
 import { NgmAddressFormComponent } from './blocks/ngm-address-form/ngm-address-form.component';
+import { PagenotfoundComponent } from './views/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgmNavigationComponent,
-    NgmDashboardComponent,
-    NgmAddressFormComponent
+    NgmAddressFormComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
