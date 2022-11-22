@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
@@ -9,7 +9,8 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './feedback-and-chat.component.html',
-  styleUrls: ['./feedback-and-chat.component.scss']
+  styleUrls: ['./feedback-and-chat.component.scss'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class FeedbackAndChatComponent implements OnInit {
 
@@ -31,6 +32,11 @@ onSubmit(): void {
 
   
   ngOnInit(): void {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1';
+    document.head.appendChild(script);
+
   }
 
 }
